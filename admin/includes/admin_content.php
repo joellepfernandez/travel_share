@@ -4,9 +4,15 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Blank Page
+                            ADMIN
                             <small>Subheading</small>
                         </h1>
+                        
+                        <?php
+                        if($database->connection){
+                            echo "true";
+                        }
+                        ?>
                         <ol class="breadcrumb">
                             <li>
                                 <i class="fa fa-dashboard"></i>  <a href="index.html">Dashboard</a>
