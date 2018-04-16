@@ -18,7 +18,7 @@ class Database{
         }
     }
     
-    public function query($sql){
+        public function query($sql){
         $result = $this->connection->query($sql);
         $this->confirm_query($result);
         return $result;

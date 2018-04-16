@@ -9,11 +9,27 @@
                         </h1>
                         
                         <?php
-                            $sql = "SELECT * FROM users WHERE id=1";
-                            $result = $database->query($sql);
-                            $user_found = mysqli_fetch_array($result);
+        
+                            $result_set = User::find_all_users();
+                            while($row = mysqli_fetch_array($result_set)){
+                                echo $row['username']."<br>";
+                            }
                             
-                            echo $user_found['username'];
+                            $found_user= User::find_user_by_id(2);
+                                $user = new User();
+                                $user->id = $found_user['id'];
+                                $user->username = $found_user['username'];
+                                $user->password = $found_user['password'];
+                                $user->first_name = $found_user['first_name'];
+                                $user->last_name = $found_user['last_name'];
+                                
+                                echo $user->id."<br>";
+                            
+                            // $sql = "SELECT * FROM users WHERE id=1";
+                            // $result = $database->query($sql);
+                            // $user_found = mysqli_fetch_array($result);
+                            
+                            // echo $user_found['username'];
                         ?>
                         
                         <ol class="breadcrumb">
