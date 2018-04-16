@@ -9,16 +9,22 @@
                         </h1>
                         
                         <?php
-        
-                            $result_set = User::find_all_users();
-                            while($row = mysqli_fetch_array($result_set)){
-                                echo $row['username']."<br>";
+                        
+                            $users = user::find_all_users();
+                            
+                            foreach($users as $user){
+                                echo $user->username."<br>";   
                             }
                             
-                            $found_user= User::find_user_by_id(2);
-                            $user = User::instantiation($found_user);
+                            // $result_set = User::find_all_users();
+                            // while($row = mysqli_fetch_array($result_set)){
+                            //     echo $row['username']."<br>";
+                            // }
+                            
+                            // $found_user= User::find_user_by_id(2);
+                            // $user = User::instantiation($found_user);
                                 
-                                echo $user->username."<br>";
+                            //     echo $user->username."<br>";
                             
                             // $sql = "SELECT * FROM users WHERE id=1";
                             // $result = $database->query($sql);
