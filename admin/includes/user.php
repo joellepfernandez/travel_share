@@ -16,14 +16,6 @@ class User {
         $the_result_array = self::find_this_query("SELECT * FROM users WHERE id= $user_id LIMIT 1");
         
         return !empty($the_result_array) ? array_shift($the_result_array) : false;
-        
-        // if(!empty($the_result_array)){
-        //     $first_item = $array_shift($the_result_array);
-        //     return $first_item;
-        // } else {
-        //     return false;  
-        // }
-        return $found_user;
     }
     
     public static function find_this_query($sql){
@@ -36,7 +28,7 @@ class User {
         return $the_object_array;
     }
     
-    public static function verify_user(){
+    public static function verify_user($username, $password){
         global $database;
         
         $username = $database->escape_string($username);
