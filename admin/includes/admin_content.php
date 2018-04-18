@@ -18,8 +18,9 @@
                             
                             // $user->create();
                             
-                            $user = User::find_user_by_id(2);
-                            $user->delete();
+                            $user = new User;
+                            $user->username = "tommy";
+                            $user->save();
 
                         ?>
                         
