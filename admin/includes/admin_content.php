@@ -10,29 +10,14 @@
                         
                         <?php
                         
-                            $found_user= User::find_user_by_id(2);
-                            echo $found_user->username;
-                            // $users = user::find_all_users();
+                            $user = new User();
+                            $user->username = "example_username";
+                            $user->password = "example_password";
+                            $user->first_name = "John";
+                            $user->last_name = "Doe";
                             
-                            // foreach($users as $user){
-                            //     echo $user->id."<br>";   
-                            // }
-                            
-                            // $result_set = User::find_all_users();
-                            // while($row = mysqli_fetch_array($result_set)){
-                            //     echo $row['username']."<br>";
-                            // }
-                            
-                            // $found_user= User::find_user_by_id(2);
-                            // $user = User::instantiation($found_user);
-                                
-                            //     echo $user->username."<br>";
-                            
-                            // $sql = "SELECT * FROM users WHERE id=1";
-                            // $result = $database->query($sql);
-                            // $user_found = mysqli_fetch_array($result);
-                            
-                            // echo $user_found['username'];
+                            $user->create();
+
                         ?>
                         
                         <ol class="breadcrumb">

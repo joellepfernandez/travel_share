@@ -72,9 +72,9 @@ class User {
         $sql .= $database->escape_string($this->username)."', '";
         $sql .= $database->escape_string($this->password)."', '";
         $sql .= $database->escape_string($this->first_name)."', '";
-        $sql .= $database->escape_string($this->last_name)."')'";
+        $sql .= $database->escape_string($this->last_name)."')";
         
-        if($datbase->query($sql)){
+        if($database->query($sql)){
             $this->id = $database->the_insert_id();
             return true;
         } else {
