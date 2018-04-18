@@ -94,6 +94,7 @@ class User {
         
         $database->query($sql);
 
+        return (mysqli_affected_rows($database->connection) == 1) ? true : false;
     }
 
 } //end of Class user
