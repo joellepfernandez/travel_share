@@ -80,6 +80,20 @@ class User {
         } else {
             return false;
         }
+    } //Create Method
+    
+    public function update(){
+        global $database;
+        
+        $sql = "UPDATE users SET";
+        $sql .= "username = '" . $database->escape_string($this->username)."', '";
+        $sql .= "password = '" . $database->escape_string($this->password)."', '";
+        $sql .= "first_name = '" . $database->escape_string($this->first_name)."', '";
+        $sql .= "last_name = '" . $database->escape_string($this->last_name)."' ";
+        $sql .= " WHERE id= " . $database->escape_string($this->id);
+        
+        $database->query($sql);
+
     }
 
 } //end of Class user
