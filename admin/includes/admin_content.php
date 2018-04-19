@@ -10,20 +10,17 @@
                         
                         <?php
                         
-                            $user = new User();
-                            // $user->username = "example_username";
-                            // $user->password = "example_password";
-                            // $user->first_name = "John";
-                            // $user->last_name = "Doe";
-                            
-                            // $user->create();
-                            
+                            //$user = new User();
                             //$user = User::find_user_by_id(7);
-                            $user->username = "wwoman";
-                            $user->password = "amazon";
-                            $user->first_name = "Princess";
-                            $user->last_name = "Diana";
-                            $user->save();
+                            $users = User::find_all();
+                            foreach($users as $user){
+                                echo $user->username;
+                            }
+                            //$user->username = "wwoman";
+                            //$user->password = "amazon";
+                            //$user->first_name = "Princess";
+                            //$user->last_name = "Diana";
+                            //$user->save();
                             // $user->create();
                             //$user->update();
                             //$user->delete();
