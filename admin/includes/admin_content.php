@@ -18,13 +18,15 @@
                             
                             // $user->create();
                             
-                            //$user = User::find_user_by_id(4);
-                            $user->username = "batman";
-                            $user->password = "martha";
-                            $user->first_name = "Bruce";
-                            $user->last_name = "Wayne";
-                            // $user->save();
-                            $user->create();
+                            //$user = User::find_user_by_id(7);
+                            $user->username = "wwoman";
+                            $user->password = "amazon";
+                            $user->first_name = "Princess";
+                            $user->last_name = "Diana";
+                            $user->save();
+                            // $user->create();
+                            //$user->update();
+                            //$user->delete();
 
                         ?>
                         
