@@ -19,10 +19,10 @@
                             // $user->create();
                             
                             //$user = User::find_user_by_id(4);
-                            $user->username = "ck123";
+                            $user->username = "batman";
                             $user->password = "martha";
-                            $user->first_name = "Clark";
-                            $user->last_name = "Kent";
+                            $user->first_name = "Bruce";
+                            $user->last_name = "Wayne";
                             // $user->save();
                             $user->create();
 
